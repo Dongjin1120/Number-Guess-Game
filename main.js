@@ -73,10 +73,14 @@ function play() {
 function reset() {
     userInput.value = "";    
     pickRandomNum();
-    resultArea.textContent = "결과값이 여기 나옵니다!"
+    resultArea.textContent = "결과값이 여기 나옵니다!";
+    chanceArea.textContent = "남은기회: 5번"    
+    
 }
 
 pickRandomNum()
+reset() 
+
 
 
 
