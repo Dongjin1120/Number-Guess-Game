@@ -61,7 +61,7 @@ function play() {
     history.push(userValue)
     console.log(history)
 
-    if(chances <1) {
+    if(chances ==0 ) {
         gameOver = true;
     }
 
@@ -73,13 +73,17 @@ function play() {
 function reset() {
     userInput.value = "";    
     pickRandomNum();
-    resultArea.textContent = "결과값이 여기 나옵니다!";
-    chanceArea.textContent = "남은기회: 5번"    
+    resultArea.textContent = "죽기 싫다면 맞춰라";
+    gameOver = false;
+    playButton.disabled = false;
+    chances = 5;
+    chanceArea.textContent = `남은기회: ${chances}번`;
+
     
 }
 
 pickRandomNum()
-reset() 
+
 
 
 
